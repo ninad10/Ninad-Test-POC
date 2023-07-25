@@ -1,0 +1,25 @@
+name: Check dbt Debug Connectivity
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  debug_connectivity:
+    runs-on: windows-latest # Change this to run on Windows
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8 # Adjust this to match your Python version
+
+    - name: Install dbt
+      run: pip install dbt
+
+    - name: Check dbt Debug Connectivity
+      run: dbt debug
