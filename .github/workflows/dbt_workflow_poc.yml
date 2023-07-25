@@ -3,7 +3,7 @@ name: Check dbt Debug Connectivity
 on:
   push:
     branches:
-      - main
+      - snowflake-etl-test
 
 jobs:
   debug_connectivity:
