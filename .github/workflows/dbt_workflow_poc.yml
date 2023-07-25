@@ -19,7 +19,7 @@ jobs:
         python-version: 3.8 # Adjust this to match your Python version
 
     - name: Install dbt
-      run: pip install dbt
+      run: pip install dbt-core
 
     - name: Check dbt Debug Connectivity
       run: dbt debug
